@@ -13,6 +13,16 @@ return {
     end,
   },
 
+  {
+    'mrcjkb/rustaceanvim',
+    version = '^5',
+    lazy = false,
+  },
+
+  {
+    "sindrets/diffview.nvim"
+  },
+
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {

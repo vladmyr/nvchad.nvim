@@ -1,6 +1,11 @@
 require "nvchad.options"
 
--- add yours here!
+local o = vim.o
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
+
+-- Keep signcolumn on by default
+o.signcolumn = 'yes'
+
+-- Backspace
+o.backspace = "indent,eol,start"
+
