@@ -1,7 +1,17 @@
+local nvimtreeConfig = require("configs.nvimtree")
+
 return {
   {
+    "nvim-tree/nvim-tree.lua",
+    cmd = { "NvimTreeToggle", "NvimTreeFocus" },
+    opts = nvimtreeConfig.opts(),
+    -- config = nvimtreeConfig.config(),
+    init = nvimtreeConfig.init(),
+  },
+
+  {
     "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
+    event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -13,14 +23,17 @@ return {
     end,
   },
 
+  -- Plugin for view git diffs
+  -- TODO (vkhytskyi): setup is required
+  {
+    "sindrets/diffview.nvim"
+  },
+
+  -- Preconfigured rust LSP
   {
     'mrcjkb/rustaceanvim',
     version = '^5',
     lazy = false,
-  },
-
-  {
-    "sindrets/diffview.nvim"
   },
 
   -- {
