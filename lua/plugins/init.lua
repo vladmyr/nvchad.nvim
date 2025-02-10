@@ -1,4 +1,5 @@
 local nvimtreeConfig = require("configs.nvimtree")
+local gitsignsConfig = require("configs.gitsigns")
 
 return {
   {
@@ -7,6 +8,12 @@ return {
     opts = nvimtreeConfig.opts(),
     -- config = nvimtreeConfig.config(),
     init = nvimtreeConfig.init(),
+  },
+
+  {
+    "lewis6991/gitsigns.nvim",
+    event = "User FilePost",
+    opts = gitsignsConfig.opts()
   },
 
   {
